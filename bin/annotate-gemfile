@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "annotate_gemfile"
+
+filename = ARGV[0] || 'Gemfile'
+AnnotateGemfile::Annotator.new.annotate(filename)
