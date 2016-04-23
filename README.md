@@ -1,28 +1,20 @@
+[![Build Status](https://travis-ci.org/jakeonrails/annotate_gemfile.svg?branch=master)](https://travis-ci.org/jakeonrails/annotate_gemfile)
+
 # AnnotateGemfile
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/annotate_gemfile`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This tool will hit the API at Rubygems and get a description for each gem listed in your project's Gemfile, and add that description as a comment above that gem.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'annotate_gemfile'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+First install the gem:
 
     $ gem install annotate_gemfile
 
 ## Usage
 
-TODO: Write usage instructions here
+Inside a Ruby project directory with a Gemfile, execute:
+
+    $ annotate-gemfile
 
 ## Development
 
@@ -32,5 +24,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/annotate_gemfile.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/jakeonrails/annotate_gemfile.
