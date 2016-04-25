@@ -4,6 +4,38 @@
 
 This tool will hit the API at Rubygems and get a description for each gem listed in your project's Gemfile, and add that description as a comment above that gem.
 
+For example, it will turn this Gemfile:
+
+```ruby
+source 'https://rubygems.org'
+
+gem 'rails'
+gem 'devise'
+gem 'marco-polo'
+
+```
+
+Into this Gemfile (saved as Gemfile.annotated):
+
+```ruby
+source 'https://rubygems.org'
+
+# Ruby on Rails is a full-stack web framework optimized for programmer happiness
+# and sustainable productivity. It encourages beautiful code by favoring
+# convention over configuration. (http://github.com/rails/rails)
+gem 'rails', '~> 3.2.22'
+
+
+# Flexible authentication solution for Rails with Warden
+# (http://github.com/plataformatec/devise)
+gem 'devise', '~> 2.2' # upgrade to 3.x too complicated
+
+# MarcoPolo shows your app name and environment in your console prompt so you
+# don't accidentally break production
+gem 'marco-polo'
+
+```
+
 ## Installation
 
 First install the gem:
