@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Annotate gemfile by jakeonrails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Annotate gemfile</h1>
+      <h2 class="project-tagline">Annotate&#39;s the Gemfile in Ruby projects with each gem&#39;s description</h2>
+      <a href="https://github.com/jakeonrails/annotate_gemfile" class="btn">View on GitHub</a>
+      <a href="https://github.com/jakeonrails/annotate_gemfile/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jakeonrails/annotate_gemfile/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://travis-ci.org/jakeonrails/annotate_gemfile"><img src="https://travis-ci.org/jakeonrails/annotate_gemfile.svg?branch=master" alt="Build Status"></a></p>
+
+<h1>
+<a id="annotategemfile" class="anchor" href="#annotategemfile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AnnotateGemfile</h1>
+
+<p>This tool will hit the API at Rubygems and get a description for each gem listed in your project's Gemfile, and add that description as a comment above that gem.</p>
+
+<p>For example, it will turn this:</p>
+
+<div class="highlight highlight-source-ruby"><pre>source <span class="pl-s"><span class="pl-pds">'</span>https://rubygems.org<span class="pl-pds">'</span></span>
+
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>rails<span class="pl-pds">'</span></span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>devise<span class="pl-pds">'</span></span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>marco-polo<span class="pl-pds">'</span></span>
+</pre></div>
+
+<p>Into this:</p>
+
+<div class="highlight highlight-source-ruby"><pre>source <span class="pl-s"><span class="pl-pds">'</span>https://rubygems.org<span class="pl-pds">'</span></span>
+
+<span class="pl-c"># Ruby on Rails is a full-stack web framework optimized for programmer happiness</span>
+<span class="pl-c"># and sustainable productivity. It encourages beautiful code by favoring</span>
+<span class="pl-c"># convention over configuration. (http://github.com/rails/rails)</span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>rails<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>~&gt; 3.2.22<span class="pl-pds">'</span></span>
+
+
+<span class="pl-c"># Flexible authentication solution for Rails with Warden</span>
+<span class="pl-c"># (http://github.com/plataformatec/devise)</span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>devise<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>~&gt; 2.2<span class="pl-pds">'</span></span> <span class="pl-c"># upgrade to 3.x too complicated</span>
+
+
+<span class="pl-c"># MarcoPolo shows your app name and environment in your console prompt so you</span>
+<span class="pl-c"># don't accidentally break production</span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>marco-polo<span class="pl-pds">'</span></span>
+</pre></div>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>First install the gem:</p>
+
+<pre><code>$ gem install annotate_gemfile
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Inside a Ruby project directory with a Gemfile, execute:</p>
+
+<pre><code>$ annotate-gemfile
+</code></pre>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+
+<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>rake spec</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+
+<p>To install this gem onto your local machine, run <code>bundle exec rake install</code>. To release a new version, update the version number in <code>version.rb</code>, and then run <code>bundle exec rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/jakeonrails/annotate_gemfile">https://github.com/jakeonrails/annotate_gemfile</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jakeonrails/annotate_gemfile">Annotate gemfile</a> is maintained by <a href="https://github.com/jakeonrails">jakeonrails</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
