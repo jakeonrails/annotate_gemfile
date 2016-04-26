@@ -1,8 +1,6 @@
 require 'gems'
 require 'ruby-progressbar'
 
-require 'awesome_print'
-
 module AnnotateGemfile
   class Annotator
 
